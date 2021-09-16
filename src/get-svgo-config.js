@@ -82,10 +82,9 @@ export const getSvgoConfig = async function (
         // from the config file.
         config.plugins = extendLoadedPlugins(config.plugins, plugins);
     } else {
-        // Merge the default plugins list with options.plugins.
-        config.plugins = extendDefaultPlugins(plugins);
+        config.plugins = plugins;
     }
-
+    
     return config;
 };
 
