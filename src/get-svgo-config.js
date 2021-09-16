@@ -1,5 +1,5 @@
 import cloneDeep from 'lodash.clonedeep';
-import {loadConfig, extendDefaultPlugins} from 'svgo';
+import {loadConfig} from 'svgo';
 
 // To prevent multiple scans of the disk for a svgo.config.js file, keep its
 // data in module scope.
@@ -84,7 +84,7 @@ export const getSvgoConfig = async function (
     } else {
         config.plugins = plugins;
     }
-    
+
     return config;
 };
 
